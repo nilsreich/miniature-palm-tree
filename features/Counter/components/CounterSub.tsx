@@ -1,5 +1,6 @@
-import React from 'react';
-import { ACTIONS, useCounterDispatch } from '../context/CounterContext';
+import React from "react";
+import { ACTIONS, useCounterDispatch } from "../context/CounterContext";
+import { MinusIcon } from "@radix-ui/react-icons";
 
 export const CounterSub = () => {
   const dispatch = useCounterDispatch();
@@ -7,5 +8,9 @@ export const CounterSub = () => {
   const decrement = () => {
     dispatch({ type: ACTIONS.DECREMENT });
   };
-  return <button onClick={decrement}>-</button>;
+  return (
+    <button onClick={decrement}>
+      <MinusIcon />
+    </button>
+  );
 };
