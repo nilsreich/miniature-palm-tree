@@ -1,5 +1,6 @@
 import { ACTIONS, useCounterDispatch } from "../context/CounterContext";
 import React from "react";
+import { PlusIcon } from "@radix-ui/react-icons";
 
 export const CounterAdd = () => {
   const dispatch = useCounterDispatch();
@@ -8,8 +9,8 @@ export const CounterAdd = () => {
   };
 
   return (
-    <button className="bg-blue-100" onClick={increment}>
-      +
+    <button onClick={increment}>
+      <PlusIcon />
     </button>
   );
 };
